@@ -1,0 +1,8 @@
+/logs/
+/.hyperexecute/
+*.exe
+*.log
+*.zip
+.updatedhyperexecute.yaml
+*.exe.old
+hyperexecuteupdate
