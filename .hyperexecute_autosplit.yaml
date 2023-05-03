@@ -1,0 +1,23 @@
+version: 0.1
+globalTimeout: 150
+testSuiteTimeout: 150
+testSuiteStep: 150
+
+runson: win
+
+autosplit: true
+retryOnFailure: false
+concurrency: 5
+pre:
+- curl -O https://dl.google.com/go/go1.20.3.windows-amd64.msi
+
+cacheKey: '{{ checksum "go.exe" }}'
+cacheDirectories:
+- C:\Program Files\Go\bin
+
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: grep -lr 't.Run(' Tests/**/*_test.go
+
+testRunnerCommand: go test $test

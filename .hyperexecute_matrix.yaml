@@ -1,0 +1,15 @@
+version: "0.1"
+matrix:
+  os: [win]
+  files: ["Tests/area/oops_test.go", "Tests/armstrong/armstrong_test.go", "Tests/array/array_test.go", "Tests/case/case_test.go", "Tests/greet/greeting_test.go", "Tests/Hello/hello_test.go", "Tests/integer/integer_test.go", "Tests/multiples/multiple_test.go", "Tests/palindrome/palindrome_test.go", "Tests/repeat/iteration_test.go"]
+runson: ${matrix.os}
+
+pre:
+- curl -O https://dl.google.com/go/go1.20.3.windows-amd64.msi
+
+cacheKey: '{{ checksum "go.exe" }}'
+cacheDirectories:
+- C:\Program Files\Go\bin
+
+testSuites:
+- go test $files
