@@ -1,8 +1,12 @@
 /logs/
 /.hyperexecute/
+/artifacts/
+/artifacts-old/
+/vendor/
 *.exe
 *.log
 *.zip
+*.txt
 .updatedhyperexecute.yaml
 *.exe.old
 hyperexecuteupdate

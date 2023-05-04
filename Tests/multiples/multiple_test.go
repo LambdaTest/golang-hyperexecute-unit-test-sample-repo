@@ -1,32 +1,30 @@
-package main
+package multiples
 
 import (
-    "testing"
+	"testing"
 )
 
-func TestIsMultipleOf5(t *testing.T) {
-    testCases := []struct {
-        name     string
-        numbers  []int
-        expected bool
-    }{
-        {"empty array", []int{}, true},
-        {"all multiples of 5", []int{0, 5, 10, 15}, true},
-        {"mixed numbers", []int{1, 3, 5, 7}, false},
-    }
+func TestIsMultipleOfFive(t *testing.T) {
+	// Test cases
+	tests := []struct {
+		name   string
+		input  []int
+		output bool
+	}{
+		{"empty array", []int{}, true},
+		{"all multiples of five", []int{5, 10, 15, 20}, true},
+		{"not all multiples of five", []int{2, 5, 7, 10}, false},
+	}
 
-    for _, tc := range testCases {
-        t.Run(tc.name, func(t *testing.T) {
-            actual := true
-            for _, num := range tc.numbers {
-                if num%5 != 0 {
-                    actual = false
-                    break
-                }
-            }
-            if actual != tc.expected {
-                t.Errorf("expected %v, but got %v", tc.expected, actual)
-            }
-        })
-    }
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			// Call function under test
+			result := isMultipleOfFive(tt.input)
+
+			// Check if output is as expected
+			if result != tt.output {
+				t.Errorf("Unexpected result. Expected %v, but got %v", tt.output, result)
+			}
+		})
+	}
 }

@@ -1,4 +1,4 @@
-package main
+package repeat
 
 import (
     "testing"
@@ -22,14 +22,5 @@ func TestRepeatedA(t *testing.T) {
             }
         })
     }
-}
-
-func hasRepeatedA(word string) bool {
-    for i := 0; i < len(word)-1; i++ {
-        if word[i] == 'a' && word[i+1] == 'a' {
-            return true
-        }
-    }
-    return false
 }
 

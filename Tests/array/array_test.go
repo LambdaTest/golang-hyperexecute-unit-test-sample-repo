@@ -1,4 +1,4 @@
-package main
+package array
 
 import (
 	"testing"
@@ -24,12 +24,4 @@ func TestSum(t *testing.T) {
             }
         })
     }
-}
-
-func sum(numbers []int) int {
-    total := 0
-    for _, number := range numbers {
-        total += number
-    }
-    return total
 }

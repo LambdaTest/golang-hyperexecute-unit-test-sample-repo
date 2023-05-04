@@ -1,7 +1,7 @@
 version: "0.1"
 matrix:
   os: [win]
-  files: ["Tests/area/oops_test.go", "Tests/armstrong/armstrong_test.go", "Tests/array/array_test.go", "Tests/case/case_test.go", "Tests/greet/greeting_test.go", "Tests/Hello/hello_test.go", "Tests/integer/integer_test.go", "Tests/multiples/multiple_test.go", "Tests/palindrome/palindrome_test.go", "Tests/repeat/iteration_test.go"]
+  files: ["golang-hyperexecute-unit-test-sample-repo/Tests/armstrong", "golang-hyperexecute-unit-test-sample-repo/Tests/array", "golang-hyperexecute-unit-test-sample-repo/Tests/case1", "golang-hyperexecute-unit-test-sample-repo/Tests/greet", "golang-hyperexecute-unit-test-sample-repo/Tests/Hello", "golang-hyperexecute-unit-test-sample-repo/Tests/integer", "golang-hyperexecute-unit-test-sample-repo/Tests/multiples", "golang-hyperexecute-unit-test-sample-repo/Tests/oops", "golang-hyperexecute-unit-test-sample-repo/Tests/palindrome", "golang-hyperexecute-unit-test-sample-repo/Tests/repeat"]
 runson: ${matrix.os}
 
 pre:
@@ -11,5 +11,11 @@ cacheKey: '{{ checksum "go.exe" }}'
 cacheDirectories:
 - C:\Program Files\Go\bin
 
+mergeArtifacts: true
+uploadArtefacts:
+- name: Reports
+  path:
+  - coverage/**
+
 testSuites:
-- go test $files
+- go test $files -coverpkg=$files -coverprofile=coverage/profile.txt 

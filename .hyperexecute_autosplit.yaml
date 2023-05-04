@@ -15,9 +15,16 @@ cacheKey: '{{ checksum "go.exe" }}'
 cacheDirectories:
 - C:\Program Files\Go\bin
 
+mergeArtifacts: true
+uploadArtefacts:
+- name: Reports
+  path:
+  - coverage/**
+
 testDiscovery:
   type: raw
   mode: dynamic
-  command: grep -lr 't.Run(' Tests/**/*_test.go
+  command: |
+    printf 'golang-hyperexecute-unit-test-sample-repo/Tests/armstrong/\ngolang-hyperexecute-unit-test-sample-repo/Tests/array/\ngolang-hyperexecute-unit-test-sample-repo/Tests/case1/\ngolang-hyperexecute-unit-test-sample-repo/Tests/greet/\ngolang-hyperexecute-unit-test-sample-repo/Tests/Hello/\ngolang-hyperexecute-unit-test-sample-repo/Tests/integer/\ngolang-hyperexecute-unit-test-sample-repo/Tests/multiples/\ngolang-hyperexecute-unit-test-sample-repo/Tests/oops/\ngolang-hyperexecute-unit-test-sample-repo/Tests/palindrome/\ngolang-hyperexecute-unit-test-sample-repo/Tests/repeat/\n'
 
-testRunnerCommand: go test $test
+testRunnerCommand: go test $test -coverpkg=$test -coverprofile=coverage/profile.txt
