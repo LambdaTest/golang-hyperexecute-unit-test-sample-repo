@@ -22,4 +22,7 @@ jobs:
           ./hyperexecute --user ${{ secrets.username }} --key ${{ secrets.accesskey }} --download-artifacts --config .hyperexecute_autosplit.yaml
           echo "Test completion"
       - name: Report Generation
-        run: cat "coverage\profile.txt"
+        uses: actions/upload-artifact@v3
+        with:
+          name: Golang Report
+          path: coverage/
