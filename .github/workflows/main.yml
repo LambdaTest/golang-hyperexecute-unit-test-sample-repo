@@ -22,4 +22,4 @@ jobs:
           ./hyperexecute --user ${{ secrets.username }} --key ${{ secrets.accesskey }} --download-artifacts --config .hyperexecute_autosplit.yaml
           echo "Test completion"
       - name: Report Generation
-        run: cat "artifacts\Reports\coverage\profile.txt"
+        run: cat "coverage\profile.txt"
