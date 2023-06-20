@@ -25,4 +25,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Golang Report
-          path: artifacts/Reports/coverage/
+          path: artifacts/Reports/coverage/profile.txt
