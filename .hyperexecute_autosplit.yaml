@@ -27,4 +27,4 @@ testDiscovery:
   command: |
     printf 'golang-hyperexecute-unit-test-sample-repo/Tests/armstrong/\ngolang-hyperexecute-unit-test-sample-repo/Tests/array/\ngolang-hyperexecute-unit-test-sample-repo/Tests/case1/\ngolang-hyperexecute-unit-test-sample-repo/Tests/greet/\ngolang-hyperexecute-unit-test-sample-repo/Tests/Hello/\ngolang-hyperexecute-unit-test-sample-repo/Tests/integer/\ngolang-hyperexecute-unit-test-sample-repo/Tests/multiples/\ngolang-hyperexecute-unit-test-sample-repo/Tests/oops/\ngolang-hyperexecute-unit-test-sample-repo/Tests/palindrome/\ngolang-hyperexecute-unit-test-sample-repo/Tests/repeat/\n'
 
-testRunnerCommand: go test $test -coverpkg=$test -covermode=atomic -coverprofile=coverage.out 
+testRunnerCommand: go test $test -coverpkg=$test -coverprofile=coverage/profile.txt
