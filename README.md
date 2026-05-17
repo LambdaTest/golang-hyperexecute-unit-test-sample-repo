@@ -16,7 +16,7 @@ With TestMu AI (Formerly LambdaTest), you can run Golang HyperExecute unit tests
 - Follow the [TestMu AI Documentation](https://www.testmuai.com/support/docs/) for the full setup walkthrough.
 
 
-# Pre-requisites
+## Pre-requisites
 
 Before using HyperExecute, you have to download HyperExecute CLI corresponding to the host OS. Along with it, you also need to export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your TestMu AI (Formerly LambdaTest) profile page.
 
