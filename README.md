@@ -5,9 +5,6 @@
   <a href="https://community.testmuai.com/"><img src="https://img.shields.io/badge/Join%20the%20community-blueviolet.svg?style=for-the-badge&labelColor=000000" alt="Community"></a>
 </p>
 
-HyperExecute is a smart test orchestration platform to run end-to-end tests at the fastest speed possible. HyperExecute lets you achieve an accelerated time to market by providing a test infrastructure that offers optimal speed, test orchestration, and detailed execution logs.
-
-The overall experience helps teams test code and fix issues at a much faster pace. HyperExecute is configured using a YAML file. Instead of moving the Hub close to you, HyperExecute brings the test scripts close to the Hub!
 
 ## Getting Started
 
@@ -18,25 +15,6 @@ With TestMu AI (Formerly LambdaTest), you can run Golang HyperExecute unit tests
 - [Sign up on TestMu AI](https://www.testmuai.com/register/) (Formerly LambdaTest).
 - Follow the [TestMu AI Documentation](https://www.testmuai.com/support/docs/) for the full setup walkthrough.
 
-* [Pre-requisites](#pre-requisites)
-   - [Download HyperExecute CLI](#download-hyperexecute-cli)
-   - [Configure Environment Variables](#configure-environment-variables)
-
-* [Auto-Split Execution with Golang](#auto-split-execution-with-Golang)
-   - [Core](#core)
-   - [Pre Steps and Dependency Caching](#pre-steps-and-dependency-caching)
-   - [Artifacts Management](#artifacts-management)
-   - [Test Execution](#test-execution)
-
-* [Matrix Execution with Golang](#matrix-execution-with-Golang)
-   - [Core](#core-1)
-   - [Pre Steps and Dependency Caching](#pre-steps-and-dependency-caching-1)
-   - [Artifacts Management](#artifacts-management-1)
-   - [Test Execution](#test-execution-1)
-
-* [Run Golang tests on Windows and Linux platforms](#run-Golang-tests-on-windows-and-linux-platforms)
-* [Secrets Management](#secrets-management)
-* [Navigation in Automation Dashboard](#navigation-in-automation-dashboard)
 
 # Pre-requisites
 
